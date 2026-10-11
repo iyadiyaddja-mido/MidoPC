@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101119">
+  <meta name="description" content="كوّن تجميعة البيسي تاعك وشوف تقدير الفريمات في ألعابك المفضلة.">
+  <title>MidoFPS — حاسبة أداء تجميعة البيسي</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="MidoFPS الرئيسية">
+        <span class="brand-mark" aria-hidden="true"><span class="brand-mark-m">M</span><span class="brand-mark-fps">FPS</span></span>
+        <span class="brand-name">Mido<span>FPS</span><small>PC PERFORMANCE</small></span>
+      </a>
+      <div class="side-label">القائمة الرئيسية</div>
+      <nav class="side-nav" aria-label="القائمة الرئيسية">
+        <a class="nav-link active" href="#calculator"><span class="nav-icon">⌗</span> حاسبة الفريمات</a>
+        <a class="nav-link" href="#build-summary"><span class="nav-icon">▦</span> تجميعتي</a>
+        <a class="nav-link" href="#popular-games"><span class="nav-icon">◈</span> الألعاب</a>
+      </nav>
+      <div class="sidebar-card">
+        <span class="side-card-icon">✦</span>
+        <strong>النتائج تقديرية</strong>
+        <p>الأداء الحقيقي يتبدل حسب التبريد، الرام، التعريفات وإعدادات اللعبة.</p>
+      </div>
+      <div class="sidebar-footer"><span class="live-dot"></span> الحاسبة جاهزة <span class="version">نسخة تجريبية</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb">الرئيسية <span>/</span> <b>حاسبة الأداء</b></div>
+        <div class="topbar-note"><span class="live-dot"></span> تقدير أداء الألعاب</div>
+      </header>
+
+      <section class="welcome">
+        <div>
+          <div class="eyebrow"><span></span> ابنِ تجميعتك، واعرف أداءها</div>
+          <h1>قدّاه تجميعتك <span>تجيب فريم؟</span></h1>
+          <p>اختار القطع واللعبة والجودة، وخذ فكرة على الأداء قبل ما تشري.</p>
+        </div>
+        <div class="welcome-chip"><span>⚡</span><div><b>حساب فوري</b><small>بدّل القطع وشوف الفرق</small></div></div>
+      </section>
+
+      <section class="builder-grid" id="calculator">
+        <div class="panel build-panel">
+          <div class="panel-heading">
+            <div class="heading-icon purple">⌘</div>
+            <div><h2>ركّب جهازك</h2><p>اختار المعالج وكرت الشاشة</p></div>
+            <span class="step-tag">01 / القطع</span>
+          </div>
+          <div class="field">
+            <label for="cpu">المعالج <span class="field-hint">CPU</span></label>
+            <div class="search-box part-search"><span>⌕</span><input id="cpu-search" type="search" placeholder="قلب بالاسم: i5 6، i5-6400..." autocomplete="off" aria-label="قلب على المعالج"></div>
+            <div class="select-wrap"><span class="select-icon">▤</span><select id="cpu" aria-label="اختار المعالج"></select><span class="chevron">⌄</span></div>
+          </div>
+          <div class="field">
+            <label for="gpu">كرت الشاشة <span class="field-hint">GPU</span></label>
+            <div class="search-box part-search"><span>⌕</span><input id="gpu-search" type="search" placeholder="HD 520، Iris Xe، RTX 4060..." autocomplete="off" aria-label="قلب على كرت الشاشة"></div>
+            <div class="select-wrap"><span class="select-icon gpu-icon">◩</span><select id="gpu" aria-label="اختار كرت الشاشة"></select><span class="chevron">⌄</span></div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="resolution">الدقة</label>
+              <div class="select-wrap compact"><select id="resolution" aria-label="اختار دقة الشاشة"><option value="720">720p</option><option value="1080" selected>1080p</option><option value="1440">1440p</option><option value="2160">4K</option></select><span class="chevron">⌄</span></div>
+            </div>
+            <div class="field">
+              <label for="quality">الجودة</label>
+              <div class="select-wrap compact"><select id="quality" aria-label="اختار جودة الرسومات"><option value="low">منخفضة</option><option value="medium">متوسطة</option><option value="high" selected>عالية</option><option value="ultra">قصوى</option></select><span class="chevron">⌄</span></div>
+            </div>
+          </div>
+          <div class="field-row memory-row">
+            <div class="field">
+              <label for="ram-capacity">الرام</label>
+              <div class="select-wrap compact"><select id="ram-capacity" aria-label="اختار سعة الرام"><option value="4">4 GB</option><option value="8">8 GB</option><option value="16" selected>16 GB</option><option value="24">24 GB</option><option value="32">32 GB</option><option value="48">48 GB</option><option value="64">64 GB</option><option value="96">96 GB</option><option value="128">128 GB</option></select><span class="chevron">⌄</span></div>
+            </div>
+            <div class="field">
+              <label for="ram-type">جيل الرام</label>
+              <div class="select-wrap compact"><select id="ram-type" aria-label="اختار جيل الرام"><option value="DDR3">DDR3</option><option value="DDR4" selected>DDR4</option><option value="DDR5">DDR5</option></select><span class="chevron">⌄</span></div>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="ram-speed">سرعة الرام</label>
+              <div class="select-wrap compact"><select id="ram-speed" aria-label="اختار سرعة الرام"></select><span class="chevron">⌄</span></div>
+            </div>
+            <div class="field">
+              <label for="ram-channel">تركيب الرام</label>
+              <div class="select-wrap compact"><select id="ram-channel" aria-label="اختار عدد قنوات الرام"><option value="single">قطعة وحدة</option><option value="dual" selected>قطعتين (Dual)</option></select><span class="chevron">⌄</span></div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="windows">نظام التشغيل</label>
+            <div class="select-wrap compact"><select id="windows" aria-label="اختار نظام التشغيل"><option value="Windows 10">Windows 10</option><option value="Windows 11" selected>Windows 11</option></select><span class="chevron">⌄</span></div>
+          </div>
+          <div class="hardware-note"><span>ⓘ</span> زدت موديلات قديمة وحديثة، منها Intel HD 520 وCore i5 الجيل السادس. الكتالوج موسّع لكنه مازال ما يشملش كل موديل نزل.</div>
+        </div>
+
+        <div class="panel game-panel" id="popular-games">
+          <div class="panel-heading">
+            <div class="heading-icon orange">◈</div>
+            <div><h2>اختار لعبتك</h2><p>ألعاب PC وألعاب المحاكيات</p></div>
+            <span class="step-tag">02 / اللعبة</span>
+          </div>
+          <label class="search-label" for="game-search">قلب على لعبة</label>
+          <div class="game-search-wrap">
+            <div class="search-box"><span>⌕</span><input id="game-search" type="search" placeholder="قلب على لعبة: GTA، Free Fire..." autocomplete="off" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="game-list" aria-expanded="false"><kbd>⌕</kbd></div>
+            <div class="game-list" id="game-list" role="listbox" aria-label="اقتراحات الألعاب" hidden></div>
+          </div>
+          <div class="selected-game" id="selected-game"></div>
+        </div>
+      </section>
+
+      <section class="results-section" id="build-summary">
+        <div class="results-title">
+          <div><div class="eyebrow"><span></span> نتيجة التجميعة</div><h2>الأداء المتوقع</h2></div>
+          <span class="estimate-badge"><span class="live-dot"></span> تقدير لكل تجميعة</span>
+        </div>
+        <div class="result-grid">
+          <div class="panel fps-panel">
+            <div class="fps-top"><div><span class="metric-label">معدل FPS التقديري</span><div class="fps-value"><strong id="fps-value">—</strong><span>FPS</span></div></div><div class="fps-gauge"><div class="gauge-inner">FPS</div></div></div>
+            <div class="one-percent-low" id="one-percent-low">النطاق المتوقع: —</div>
+            <div class="fps-bar"><span id="fps-bar"></span></div>
+            <div class="fps-scale"><span>0</span><span>30</span><span>60</span><span>120+</span></div>
+            <div class="performance-status"><span class="status-dot"></span><span id="performance-status">اختار قطعك ولعبتك باش نحسبولك</span></div>
+            <div class="result-divider"></div>
+            <div class="result-meta">
+              <div><span class="meta-icon">▣</span><span>اللعبة</span><b id="result-game">—</b></div>
+              <div><span class="meta-icon">▤</span><span>الدقة والجودة</span><b id="result-settings">—</b></div>
+              <div><span class="meta-icon">▥</span><span>الرام والنظام</span><b id="result-memory">—</b></div>
+            </div>
+          </div>
+          <div class="panel details-panel">
+            <div class="details-heading"><div><h3>تفاصيل التجميعة</h3><p>المعالج وكرت الشاشة المختاران</p></div><span class="trend-icon">✓</span></div>
+            <div class="detail-row"><div class="detail-name"><span class="detail-symbol cpu-symbol">▤</span><div><b>المعالج</b><small id="result-cpu">—</small></div></div></div>
+            <div class="detail-row"><div class="detail-name"><span class="detail-symbol gpu-symbol">◩</span><div><b>كرت الشاشة</b><small id="result-gpu">—</small></div></div></div>
+            <div class="bottleneck-box" id="bottleneck-box"><span class="bulb">ⓘ</span><div><b id="bottleneck-title">تقدير الأداء</b><p id="bottleneck-message">الرقم تقريبي ويتغير حسب إعدادات اللعبة والتعريفات والتبريد.</p><a id="benchmark-source" href="#" target="_blank" rel="noopener noreferrer" hidden></a></div></div>
+            <p class="estimate-disclaimer">هذا تقدير حسابي وليس اختبارًا مباشرًا؛ ممكن يختلف الأداء الفعلي بشكل واضح عن النطاق المعروض.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer"><span>MidoFPS <b>·</b> مساعدتك باش تختار تجميعة مناسبة</span><span>كل الأرقام تقديرية وليست ضمانًا لأداء الجهاز</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
